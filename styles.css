@@ -1,0 +1,122 @@
+
+
+
+.foto {
+
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+}
+
+.ub {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+
+/* Caja principal */
+
+#home {
+
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;  
+    align-items: center;
+   
+    
+}
+    /* cajas donde van las imagenes */
+
+ .cuadro1 .img {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+ /* Cajas individuales */
+
+.cuadro1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    min-height: 450px;
+    margin: 50px 0px 50px 0px;
+    background: white;
+
+    
+    
+}
+/* imagenes dentro de sus respectivas cajas */
+
+
+.cuadro1 .img img {
+
+    max-width: 100%;
+
+
+}
+
+/* cajas con los encabezados de las cajas sus y fechas */
+
+.cuadro1 .C {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background: blue;
+
+}
+
+/* cajas del tutilo */
+
+.c1{
+    
+    width:50%;
+    background: white;
+    padding: 10px;
+  
+}
+
+/* Cajas de la fecha */
+
+.c2 {
+
+    width:50%;
+    background: white;
+    padding: 10px;
+    text-align: end;   
+
+}
+/* parrafos dentro de las cajas con el titulo de la caja */
+
+
+.c1 p {
+  
+    font-weight: bold;
+
+}
+/* parrafos dentro de las cajas con la fecha de la caja */
+
+.c2 p {
+
+    opacity: 60%;
+
+}
+
+/* pies de las cajas */
+
+
+.Cpie {
+
+    width: 100%;
+    background: white;
+    padding: 10px 10px 10px 10px;
+
+
+}

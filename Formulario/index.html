@@ -17,9 +17,13 @@
         </div>
         <div class="card-body">
 
-            <div class="alert alert-danger" role="alert col-md-12">
+            <div class="alert alert-danger none"  id="alerta_top"role="alert col-md-12">
                 Some fields are missing
-              </div>
+            </div>
+
+            <div class="alert alert-success none2 " id="alerta_bot" role="alert">
+                GOOOD!!! YOU ARE A GENIUS!!
+            </div>
               
             <form class="row g-3">
                 <div class="col-md-5">
@@ -104,7 +108,7 @@
                         <div class="col-6 mb-5">
                             <label for="inputAddress" class="form-label"><strong>State</strong></label>
                             <select class="form-select state" aria-label="Default select example" >
-                                <option selected>Pick a state</option>
+                                <option selected >Pick a state</option>
                                 <option value="1">San Jose</option>
                                 <option value="2">Montevideo</option>
                                 <option value="3">Durazno</option>
@@ -129,7 +133,8 @@
                 </div>
 
 
-            
+                
+
                 </div>
               </form>
         </div>
@@ -138,8 +143,8 @@
             
             <div class="pies d-flex ">
                 <button type="submit" class="btn btn-primary col-6 me-2 bg-secondary text-white">Cancel</button>
-            
                 <button type="submit" onclick="Validar_Formulario()" class="btn btn-primary col-6">Send</button>
+               
 
             </div>
             

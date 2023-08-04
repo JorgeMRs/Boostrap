@@ -18,18 +18,19 @@ const T_state = document.getElementById("T_state")
 const T_P_code = document.getElementById("T_P_code")
 const T_message = document.getElementById("T_message")
 const T_city = document.getElementById("T_city")
+const From = document.getElementById("form")
 
 
 
-function Cambiar_Estilos(valor, valor2) {
+function Cambiar_Estilos(valor) {
 
 
-    let camp = document.querySelector(valor) //1. obtener el elemento HTML 
+    let camp = document.getElementById(valor) //1. obtener el elemento HTML 
    
 
-    camp.style.opacity = "50%"
-    camp.style.border = "3px solid red"
-    valor2.style.color = "red"
+    valor.style.opacity = "50%"
+    valor.style.border = "3px solid red"
+    valor.style.color = "red"
 
 
 
@@ -37,14 +38,9 @@ function Cambiar_Estilos(valor, valor2) {
 
 function Default(valor, valor2) {
 
-    let def = document.querySelector(valor) //1. obtener el elemento HTML 
+    let def = document.getElementById(valor) //1. obtener el elemento HTML 
 
-    def.style.border = "none"
-    def.style.border = "3px solid black"
-    valor2.style.color = "black"
     
-    
-
 
 }
 
@@ -64,11 +60,46 @@ me = "";
 
 
 
-function Validar_Formulario(event) {
-var conf = 0
+function Validar_Formulario() {
 
 
-    if (card.value == "") {
+
+    for (let i = 0; i < From.length; i++) {
+        let remove = []
+
+        remove[i] = From[i];
+        
+        remove.splice(5, 4);
+
+        console.log(remove)
+    
+    
+       
+        ca = card.value
+        cv = cvc.value
+        am = amount.value
+        fn = f_name.value
+        pc = p_code.value
+        cy = city.value
+        st = state.value
+        ln = l_name.value
+        mp = p_mesa.value
+        
+    
+        if (From[i] == "") {
+            console.log(From)
+             alerta.style.display = "block" 
+            Cambiar_Estilos(From[i])
+           
+        } else if (From[i].value !== "") {
+    
+            Default(From[i])
+            
+        }
+    
+           
+    }
+   /*  if (card.value == "") {
         ca = ".card1"
         Cambiar_Estilos(ca, T_card)
         alerta.style.display = "block"
@@ -171,7 +202,7 @@ var conf = 0
         Default(me , T_message)
         
 
-    }
+    } */
 
   if (card.value !== "" && cvc.value !== "" && amount.value !== "" && f_name.value !== "" && p_code.value !== "" && city.value !== "" && state.value !== "Pick a state" && l_name.value !== "" && p_mesa.value !== ""  ) {
     
@@ -188,6 +219,7 @@ var conf = 0
   }
 
  
-}
 
+
+}
 

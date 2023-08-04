@@ -40,6 +40,10 @@ function Default(valor, valor2) {
 
     let def = document.getElementById(valor) //1. obtener el elemento HTML 
 
+    valor.style.border = "none"
+    valor.style.border = "3px solid black"
+    valor.style.color = "black"
+    alerta.style.display = "none"
     
 
 }
@@ -66,15 +70,11 @@ function Validar_Formulario() {
 
     for (let i = 0; i < From.length; i++) {
         let remove = []
-
+      
         remove[i] = From[i];
+        console.log(From[i])
         
-        remove.splice(5, 4);
-
-        console.log(remove)
-    
-    
-       
+         
         ca = card.value
         cv = cvc.value
         am = amount.value
@@ -86,15 +86,15 @@ function Validar_Formulario() {
         mp = p_mesa.value
         
     
-        if (From[i] == "") {
-            console.log(From)
-             alerta.style.display = "block" 
-            Cambiar_Estilos(From[i])
-           
-        } else if (From[i].value !== "") {
-    
-            Default(From[i])
+        if (remove[i].value == "") {
             
+            alerta.style.display = "block" 
+            Cambiar_Estilos(remove[i])
+           
+        }else if (remove[i].value !== "") {
+    
+            Default(remove[i])
+             
         }
     
            
